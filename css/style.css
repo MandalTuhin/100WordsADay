@@ -1,79 +1,80 @@
-* {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-}
+    /* ===== CSS ===== */
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
 
-body {
-  font-family: 'Lora', serif;
-  background-color: #fdfdfd;
-  color: #333;
+    body {
+      font-family: 'Lora', serif;
+      background-color: #fdfdfd;
+      color: #333;
+    }
 
-  /* padding: 40px 20px; */
-}
+    .container {
+      min-height: 100vh; /* Use min-height to allow content to expand */
+      display: flex;
+      justify-content: center;
+      background-color: beige;
+      padding: 40px 20px; /* Add some padding for better spacing on smaller screens */
+      align-items: flex-start; 
+      /* Align to the top */
+    }
 
-.container{
-  height: 100vh;
-  display: flex;
-  justify-content: center;
-  background-color: beige;
-  /* flex-basis: ; */
-  align-items: center;
-}
+    .editor-container {
+        margin-top: 4rem;
+      width: 100%;
+      max-width: 700px;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+    }
 
-.editor-container {
-  width: 100%;
-  max-width: 700px;
-  display: flex;
-  /* background-color: #aaa; */
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-}
+    textarea {
+      font-family: 'Lora', serif;
+      width: 100%;
+      border: none;
+      resize: none;
+      outline: none;
+      padding: 16px 0;
+      background: transparent;
+      font-size: 1.2rem;
+      line-height: 1.6;
+      scrollbar-width: none; /* For Firefox */
+      -ms-overflow-style: none; /* For Internet Explorer and Edge */
+      overflow-y: hidden; /* This is key for our JS to work smoothly */
+    }
 
-textarea {
-  font-family: 'Lora', serif;
-  width: 100%;
-  border: none;
-  resize: none;
-  outline: none;
-  padding: 16px 0;
-  background: transparent;
-  font-size: 1.2rem;
-  line-height: 1.6;
-  scrollbar-width: none;
-}
+    textarea::-webkit-scrollbar {
+        display: none; /* For Chrome, Safari, and Opera */
+    }
 
-.title {
-  /* font-family: "Open Sans", sans-serif; */
-  font-size: 3rem;
-  flex-basis: 90px;
-  /* flex: auto; */
-  font-weight: bold;
-  /* background-color: rgb(138, 87, 111); */
-}
+    .title {
+      font-size: 3rem;
+      font-weight: bold;
+      line-height: 1.2; /* Adjust line-height for the title */
+    }
 
-.body {
-  margin-top: 20px;
-  /* background-color: aqua; */
-  height: 300px; 
-  /* optional, you can make it auto-grow later */
-}
+    .body {
+      margin-top: 20px;
+      min-height: 200px; /* Set a min-height instead of fixed height */
+    }
 
-.submit-btn {
-    font-family: 'Lora', serif;
-  margin-top: 30px;
-  width: 180px;
-  padding: 14px;
-  border: 1px solid #aaa;
-  background-color: white;
-  border-radius: 30px;
-  font-size: 1.1rem;
-  color: #414141;
-  cursor: pointer;
-  transition: 0.3s ease;
-}
+    .submit-btn {
+      font-family: 'Lora', serif;
+      margin-top: 30px;
+      width: 180px;
+      padding: 14px;
+      border: 1px solid #aaa;
+      background-color: white;
+      border-radius: 30px;
+      font-size: 1.1rem;
+      color: #414141;
+      cursor: pointer;
+      transition: 0.3s ease;
+    }
 
-.submit-btn:hover {
-  background-color: #f0f0f0;
-}
+    .submit-btn:hover {
+      background-color: #f0f0f0;
+    }
